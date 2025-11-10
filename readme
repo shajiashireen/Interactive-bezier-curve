@@ -15,3 +15,20 @@
 - Tangents are visualized by computing the derivative B′(t).
 
 ## Physics
+acceleration = -k * (position - target) - damping * velocity
+
+Integrated using **semi-implicit Euler** for stability.
+
+## Controls
+- Adjust stiffness (`k`), damping, tangent length, and sample count using the right-side UI panel.
+
+## iOS Adaptation
+To adapt for iOS:
+- Replace mouse input with **CoreMotion** gyroscope values.
+- Use `CADisplayLink` to call the same update loop at 60 FPS.
+
+## Recording
+Use your OS screen recorder:
+- macOS: `Shift + Cmd + 5`
+- Windows: `Win + G`
+- Linux: `OBS` or `simplescreenrecorder`
