@@ -1,0 +1,17 @@
+# Interactive Bézier Rope
+
+## Files
+- `interactive-bezier-rope.html`
+
+## Quick Start
+1. Save `interactive-bezier-rope.html` to disk.
+2. Open it with any modern browser.
+3. Move your mouse around or drag the control points to interact.
+
+## Essentials
+- Implements a **cubic Bézier curve** and its **derivative** manually.
+- Two inner control points (**P₁**, **P₂**) are dynamic with **spring-damper physics**.
+- Endpoints (**P₀**, **P₃**) remain fixed.
+- Tangents are visualized by computing the derivative B′(t).
+
+## Physics

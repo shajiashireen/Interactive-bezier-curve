@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Bézier Rope</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="stage"></canvas>
+
+    <aside class="panel">
+      <h1>Interactive Bézier Rope</h1>
+
+      <p class="hint">Move the mouse to whip the rope. Click and drag points to pin them.</p>
+
+      <div class="controls">
+        <label>Stiffness <span id="kVal">60</span></label>
+        <input id="k" type="range" min="5" max="300" value="60">
+
+        <label>Damping <span id="dVal">8</span></label>
+        <input id="d" type="range" min="0" max="40" value="8">
+
+        <label>Tangent length <span id="tLenVal">26</span></label>
+        <input id="tLen" type="range" min="4" max="80" value="26">
+
+        <label>Samples <span id="samplesVal">200</span></label>
+        <input id="samples" type="range" min="50" max="600" value="200">
+
+        <div class="buttons">
+          <button id="reset">Reset</button>
+          <button id="toggleTang">Hide tangents</button>
+        </div>
+
+        <div class="legend">
+          <span class="dot curve"></span> Curve
+          <span class="dot cp"></span> Control points
+          <span class="dot tan"></span> Tangents
+        </div>
+      </div>
+
+      <div class="status">
+        FPS: <strong id="fps">0</strong>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
